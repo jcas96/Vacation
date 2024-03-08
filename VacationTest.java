@@ -1,8 +1,21 @@
+import java.util.Scanner;
 
 public class VacationTest {
 
 	public static void main(String[] args) {
-		AllInclusiveVacation vacay1 = new AllInclusiveVacation("Orlando", 1000.00 , "Disney", 4, 989.49);
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please Enter the Vacation Destination: ");
+		String dest = input.next();
+		System.out.println("Please enter the Budget");
+		double budg = input.nextDouble();
+		System.out.println("Please enter the Brand: ");
+		String br = input.next();
+		System.out.println("Please enter the Rating: ");
+		int rate = input.nextInt();
+		System.out.println("Please enter the Price: ");
+		double pri = input.nextDouble();
+		AllInclusiveVacation vacay1 = new AllInclusiveVacation(dest, budg , br, rate, pri);
 		System.out.printf("The First all-Inclusive vacation is:\n%S\n",vacay1.toString());
 		if(vacay1.overBudget()<0.0001&&vacay1.overBudget()>-0.0001) {
 			System.out.printf("It is on budget");
@@ -12,7 +25,18 @@ public class VacationTest {
 			System.out.printf("It is over budget by $%.2f", -vacay1.overBudget());
 		}
 		
-		AllInclusiveVacation vacay2 = new AllInclusiveVacation("Bahamas", 2000.00, "ClubMed", 4, 2049.99 );
+		
+		System.out.println("\nPlease Enter the Vacation Destination: ");
+		dest = input.next();
+		System.out.println("Please enter the Budget");
+		budg = input.nextDouble();
+		System.out.println("Please enter the Brand: ");
+		br = input.next();
+		System.out.println("Please enter the Rating: ");
+		rate = input.nextInt();
+		System.out.println("Please enter the Price: ");
+		pri = input.nextDouble();
+		AllInclusiveVacation vacay2 = new AllInclusiveVacation(dest, budg , br, rate, pri);
 		System.out.printf("\n\nThe Second all-inclusive vacation is: \n%S\n", vacay2.toString());
 		if(vacay2.overBudget()<0.0001&&vacay2.overBudget()>-0.0001) {
 			System.out.printf("It is on budget");
