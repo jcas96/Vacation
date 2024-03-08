@@ -100,6 +100,8 @@ public class VacationTest {
 		}else {
 			System.out.printf("\npmv1 and pmv2 are not equal");
 		}
+
+		input.close();
 		
 	}
 }
