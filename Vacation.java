@@ -1,9 +1,10 @@
-
+//abstract class that creates multiple methods to be used at a later time
 abstract class Vacation {
 	
 	private String destination;
 	private double budget;
-	
+
+	//simple setter methods for setting destination, and budget
 	Vacation(String dest, double budg){
 		setDestination(dest);
 		setBudget(budg);
@@ -12,6 +13,8 @@ abstract class Vacation {
 	public void setDestination(String d) {
 		destination = d;
 	}
+
+	//budget can only be set if you have a higher than 0.0 budget, sends an exception error if not
 	public void setBudget(double b) {
 		if(b>=0.0) {
 		budget = b;
@@ -32,7 +35,8 @@ abstract class Vacation {
 	public String toString() {
 		return String.format("Destination: %S; Budget: $%.2f\n", destination,budget);
 	}
-	
+
+	//Checks to see if the original vacation is the same as the vacation that is being compared/equals to at the moment
 	@Override
 	public boolean equals(Object obj) {
 		if(!(obj instanceof Vacation)) {
