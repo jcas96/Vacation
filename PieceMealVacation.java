@@ -1,4 +1,4 @@
-
+//uses the abstract class 'Vacation' as a subclass
 public class PieceMealVacation extends Vacation{
 	
 	private String [] items;
@@ -9,7 +9,8 @@ public class PieceMealVacation extends Vacation{
 		setCosts(cost);
 		
 	}
-	
+
+	//simply adds items to the lists
 	public void setItems(String[]newItems) {
 		int len = newItems.length;
 		items = new String[len];
@@ -17,7 +18,8 @@ public class PieceMealVacation extends Vacation{
 			items[i]=newItems[i];
 		}
 	}
-	
+
+	//adds only up to the length of the newCosts, but if there is too little inputs, it will add 0.0 for remaining elements
 	public void setCosts(double[]newCosts) {
 		int len = items.length;
 		costs = new double[len];
@@ -66,7 +68,8 @@ public class PieceMealVacation extends Vacation{
 		}
 		return ans;
 	  }
-	
+
+	//finds out if, and by how much you are over your vacation budget
 	@Override
 	public double overBudget() {
 		double amt=0;
