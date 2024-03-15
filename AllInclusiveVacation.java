@@ -1,4 +1,4 @@
-
+//uses the abstract class 'Vacation' as a subclass
 class AllInclusiveVacation extends Vacation{
 	private String brand;
 	private int rating;
@@ -16,6 +16,7 @@ class AllInclusiveVacation extends Vacation{
 	}
 	
 
+	//emthod that checks to make sure the rating is from 1-5 or else it wil throw a exception error 
 	public void setRating(int r) {
 		if(r>=1&&r<=5) {
 			rating = r;
